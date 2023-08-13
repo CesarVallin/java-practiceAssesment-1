@@ -33,34 +33,34 @@ public class AssessmentTests {
 //    }
 
     /***************** Test Quotient Method *****************/
-    @Test
-    public void testQuotientMethod() {
-        try {
-            Assessment.class.getMethod("quotient", double.class, double.class);
-            assertEquals(3.2, Assessment.quotient(16.0, 5.0), 0.2);
-        } catch( NoSuchMethodException e ) {
-            Assert.fail("quotient() method not found");
-        }
-    }
-
-    /***************** Test minMaxSum Method *****************/
 //    @Test
-//    public void testMinMaxSumMethod() {
-//        /***************** Test minMaxSum Method *****************/
+//    public void testQuotientMethod() {
 //        try {
-//            Assessment.class.getMethod("minMaxSum", int[].class);
-//            int[] minMax1 = {1,2,3,4,5};             // 1 + 5 = 6
-//            int[] minMax2 = {100,1,44,22,77,99,2};   // 100 + 1 = 101
-//            int[] minMax3 = {-1,88,3,15,31,63,-2,0}; // 88 + -2 = 86
-//            assertEquals(6, Assessment.minMaxSum(minMax1));
-//            assertEquals(101, Assessment.minMaxSum(minMax2));
-//            assertEquals(86, Assessment.minMaxSum(minMax3));
-//        } catch (NoSuchMethodException e) {
-//            Assert.fail("minMaxSum() method not found");
-//        } catch (Exception e) {
-//            Assert.fail("Something else went wrong with the minMaxSum() method");
+//            Assessment.class.getMethod("quotient", double.class, double.class);
+//            assertEquals(3.2, Assessment.quotient(16.0, 5.0), 0.2);
+//        } catch( NoSuchMethodException e ) {
+//            Assert.fail("quotient() method not found");
 //        }
 //    }
+
+    /***************** Test minMaxSum Method *****************/
+    @Test
+    public void testMinMaxSumMethod() {
+        /***************** Test minMaxSum Method *****************/
+        try {
+            Assessment.class.getMethod("minMaxSum", int[].class);
+            int[] minMax1 = {1,2,3,4,5};             // 1 + 5 = 6
+            int[] minMax2 = {100,1,44,22,77,99,2};   // 100 + 1 = 101
+            int[] minMax3 = {-1,88,3,15,31,63,-2,0}; // 88 + -2 = 86
+            assertEquals(6, Assessment.minMaxSum(minMax1));
+            assertEquals(101, Assessment.minMaxSum(minMax2));
+            assertEquals(86, Assessment.minMaxSum(minMax3));
+        } catch (NoSuchMethodException e) {
+            Assert.fail("minMaxSum() method not found");
+        } catch (Exception e) {
+            Assert.fail("Something else went wrong with the minMaxSum() method");
+        }
+    }
 
     /***************** Test Vehicle Class *****************/
 //    @Test

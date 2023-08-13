@@ -15,12 +15,30 @@ public class Assessment {
     public static double quotient(double num1, double num2) {
         return num1 / num2;
     }
+    /** minMaxSum completed */
+    public static int minMaxSum(int [] param) {
+        int min = param[0];
+        for (int i = 0; i < param.length; i++) {
+            if (param[i] < min) {
+                min = param[i];
+            }
+        }
+        int max = param[0];
+        for (int i = 0; i < param.length; i++) {
+            if (param[i] > max) {
+                max = param[i];
+            }
+        }
+        return min + max;
+    }
 
 
 
     public static void main(String[] args) {
         System.out.println("hello");
+        int[] minMax3 = {-1,88,3,15,31,63,-2,0};
 
+        System.out.println(minMaxSum(minMax3));
 
     }
 }
