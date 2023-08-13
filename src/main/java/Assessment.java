@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Assessment {
 
     /** Factorial completed */
@@ -30,6 +33,17 @@ public class Assessment {
             }
         }
         return min + max;
+    }
+
+    /** */
+    public static ArrayList<Vehicle> vehicles = new ArrayList<>();
+    public static HashMap<String, Vehicle> createInventory(ArrayList<Vehicle> vehicles){
+        HashMap<String, Vehicle> inventoryList = new HashMap<>();
+        String licensePlate = "SATX";
+        for(int i = 0; i < vehicles.size(); i++) {
+            inventoryList.put(licensePlate + i, vehicles.get(i));
+        }
+        return inventoryList;
     }
 
 
