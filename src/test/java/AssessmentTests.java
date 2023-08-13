@@ -44,56 +44,56 @@ public class AssessmentTests {
 //    }
 
     /***************** Test minMaxSum Method *****************/
-    @Test
-    public void testMinMaxSumMethod() {
-        /***************** Test minMaxSum Method *****************/
-        try {
-            Assessment.class.getMethod("minMaxSum", int[].class);
-            int[] minMax1 = {1,2,3,4,5};             // 1 + 5 = 6
-            int[] minMax2 = {100,1,44,22,77,99,2};   // 100 + 1 = 101
-            int[] minMax3 = {-1,88,3,15,31,63,-2,0}; // 88 + -2 = 86
-            assertEquals(6, Assessment.minMaxSum(minMax1));
-            assertEquals(101, Assessment.minMaxSum(minMax2));
-            assertEquals(86, Assessment.minMaxSum(minMax3));
-        } catch (NoSuchMethodException e) {
-            Assert.fail("minMaxSum() method not found");
-        } catch (Exception e) {
-            Assert.fail("Something else went wrong with the minMaxSum() method");
-        }
-    }
-
-    /***************** Test Vehicle Class *****************/
 //    @Test
-//    public void testVehicleClass() {
+//    public void testMinMaxSumMethod() {
+//        /***************** Test minMaxSum Method *****************/
 //        try {
-//            Class.forName("Vehicle");
-//            Vehicle.class.getMethod("getManufacturer");
-//            Vehicle.class.getMethod("getModel");
-//            Vehicle.class.getMethod("getCargoCapacity");
-//            Vehicle.class.getMethod("getModelYear");
-//
-//            Vehicle miata = new Vehicle("Mazda", "Miata", 5, 1998);
-//            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
-//            Vehicle sprinter = new Vehicle("Mercedes", "Sprinter", 50, 2018);
-//
-//            ArrayList<Vehicle> allAutos = new ArrayList<>();
-//            HashMap<String, Vehicle> carInventory = new HashMap<>();
-//            allAutos.add(miata);
-//            allAutos.add(mustang);
-//            allAutos.add(sprinter);
-//
-//            assertEquals(1998, miata.getModelYear());
-//            assertNotEquals("1998", miata.getModelYear());
-//            assertEquals(2005, mustang.getModelYear());
-//            assertEquals(2018, sprinter.getModelYear());
-//        } catch( ClassNotFoundException e ) {
-//            Assert.fail("Vehicle Class not found");
-//        } catch( NoSuchMethodException e ) {
-//            Assert.fail("Getters and/or Setters not found in Vehicles Class");
-//        } catch( Exception e ) {
-//            Assert.fail("Something else went wrong with the Vehicle Class");
+//            Assessment.class.getMethod("minMaxSum", int[].class);
+//            int[] minMax1 = {1,2,3,4,5};             // 1 + 5 = 6
+//            int[] minMax2 = {100,1,44,22,77,99,2};   // 100 + 1 = 101
+//            int[] minMax3 = {-1,88,3,15,31,63,-2,0}; // 88 + -2 = 86
+//            assertEquals(6, Assessment.minMaxSum(minMax1));
+//            assertEquals(101, Assessment.minMaxSum(minMax2));
+//            assertEquals(86, Assessment.minMaxSum(minMax3));
+//        } catch (NoSuchMethodException e) {
+//            Assert.fail("minMaxSum() method not found");
+//        } catch (Exception e) {
+//            Assert.fail("Something else went wrong with the minMaxSum() method");
 //        }
 //    }
+
+    /***************** Test Vehicle Class *****************/
+    @Test
+    public void testVehicleClass() {
+        try {
+            Class.forName("Vehicle");
+            Vehicle.class.getMethod("getManufacturer");
+            Vehicle.class.getMethod("getModel");
+            Vehicle.class.getMethod("getCargoCapacity");
+            Vehicle.class.getMethod("getModelYear");
+
+            Vehicle miata = new Vehicle("Mazda", "Miata", 5, 1998);
+            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
+            Vehicle sprinter = new Vehicle("Mercedes", "Sprinter", 50, 2018);
+
+            ArrayList<Vehicle> allAutos = new ArrayList<>();
+            HashMap<String, Vehicle> carInventory = new HashMap<>();
+            allAutos.add(miata);
+            allAutos.add(mustang);
+            allAutos.add(sprinter);
+
+            assertEquals(1998, miata.getModelYear());
+            assertNotEquals("1998", miata.getModelYear());
+            assertEquals(2005, mustang.getModelYear());
+            assertEquals(2018, sprinter.getModelYear());
+        } catch( ClassNotFoundException e ) {
+            Assert.fail("Vehicle Class not found");
+        } catch( NoSuchMethodException e ) {
+            Assert.fail("Getters and/or Setters not found in Vehicles Class");
+        } catch( Exception e ) {
+            Assert.fail("Something else went wrong with the Vehicle Class");
+        }
+    }
 
     /***************** Test createInventory Method *****************/
 //    @Test
