@@ -1,4 +1,4 @@
-public class Vehicle {
+public class Vehicle implements VehicleStorage {
 
     /** Instance properties */
     private String manufacturer;
@@ -49,5 +49,17 @@ public class Vehicle {
 
     public void setModelYear(int modelYear) {
         this.modelYear = modelYear;
+    }
+
+    @Override
+    public String storeStuff(String stuff) {
+        String adjective = null;
+        if (this.getCargoCapacity() < 20) {
+            adjective = "measly";
+        }
+        if (this.getCargoCapacity() > 20) {
+            adjective = "whopping";
+        }
+        return "The " + this.getManufacturer() + " " + this.getModel() + " can store a " + adjective + " " + this.getCargoCapacity() + " units of " + stuff + ".";
     }
 }

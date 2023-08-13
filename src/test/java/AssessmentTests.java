@@ -63,37 +63,37 @@ public class AssessmentTests {
 //    }
 
     /***************** Test Vehicle Class *****************/
-    @Test
-    public void testVehicleClass() {
-        try {
-            Class.forName("Vehicle");
-            Vehicle.class.getMethod("getManufacturer");
-            Vehicle.class.getMethod("getModel");
-            Vehicle.class.getMethod("getCargoCapacity");
-            Vehicle.class.getMethod("getModelYear");
-
-            Vehicle miata = new Vehicle("Mazda", "Miata", 5, 1998);
-            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
-            Vehicle sprinter = new Vehicle("Mercedes", "Sprinter", 50, 2018);
-
-            ArrayList<Vehicle> allAutos = new ArrayList<>();
-            HashMap<String, Vehicle> carInventory = new HashMap<>();
-            allAutos.add(miata);
-            allAutos.add(mustang);
-            allAutos.add(sprinter);
-
-            assertEquals(1998, miata.getModelYear());
-            assertNotEquals("1998", miata.getModelYear());
-            assertEquals(2005, mustang.getModelYear());
-            assertEquals(2018, sprinter.getModelYear());
-        } catch( ClassNotFoundException e ) {
-            Assert.fail("Vehicle Class not found");
-        } catch( NoSuchMethodException e ) {
-            Assert.fail("Getters and/or Setters not found in Vehicles Class");
-        } catch( Exception e ) {
-            Assert.fail("Something else went wrong with the Vehicle Class");
-        }
-    }
+//    @Test
+//    public void testVehicleClass() {
+//        try {
+//            Class.forName("Vehicle");
+//            Vehicle.class.getMethod("getManufacturer");
+//            Vehicle.class.getMethod("getModel");
+//            Vehicle.class.getMethod("getCargoCapacity");
+//            Vehicle.class.getMethod("getModelYear");
+//
+//            Vehicle miata = new Vehicle("Mazda", "Miata", 5, 1998);
+//            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
+//            Vehicle sprinter = new Vehicle("Mercedes", "Sprinter", 50, 2018);
+//
+//            ArrayList<Vehicle> allAutos = new ArrayList<>();
+//            HashMap<String, Vehicle> carInventory = new HashMap<>();
+//            allAutos.add(miata);
+//            allAutos.add(mustang);
+//            allAutos.add(sprinter);
+//
+//            assertEquals(1998, miata.getModelYear());
+//            assertNotEquals("1998", miata.getModelYear());
+//            assertEquals(2005, mustang.getModelYear());
+//            assertEquals(2018, sprinter.getModelYear());
+//        } catch( ClassNotFoundException e ) {
+//            Assert.fail("Vehicle Class not found");
+//        } catch( NoSuchMethodException e ) {
+//            Assert.fail("Getters and/or Setters not found in Vehicles Class");
+//        } catch( Exception e ) {
+//            Assert.fail("Something else went wrong with the Vehicle Class");
+//        }
+//    }
 
     /***************** Test createInventory Method *****************/
 //    @Test
@@ -124,22 +124,22 @@ public class AssessmentTests {
 //    }
 
     /* Test for Question 4 */
-//    @Test
-//    public void testStoreStuff() {
-//        try {
-//            Class.forName("VehicleStorage");
-//            VehicleStorage.class.getMethod("storeStuff", String.class);
-//            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
-//            assertEquals("The Ford Mustang can store a measly 10 units of groceries.", mustang.storeStuff("groceries"));
-//        } catch(ClassNotFoundException e) {
-//            Assert.fail("VehicleStorage Interface not found");
-//        } catch(NoSuchMethodException e) {
-//            Assert.fail("storeStuff() interface method not found");
-//        }
-//        catch( Exception e) {
-//            Assert.fail("Something else went wrong with the testStoreStuff");
-//        }
-//    }
+    @Test
+    public void testStoreStuff() {
+        try {
+            Class.forName("VehicleStorage");
+            VehicleStorage.class.getMethod("storeStuff", String.class);
+            Vehicle mustang = new Vehicle("Ford", "Mustang", 10, 2005);
+            assertEquals("The Ford Mustang can store a measly 10 units of groceries.", mustang.storeStuff("groceries"));
+        } catch(ClassNotFoundException e) {
+            Assert.fail("VehicleStorage Interface not found");
+        } catch(NoSuchMethodException e) {
+            Assert.fail("storeStuff() interface method not found");
+        }
+        catch( Exception e) {
+            Assert.fail("Something else went wrong with the testStoreStuff");
+        }
+    }
 
     /***************** Test the Truck Class *****************/
 //    @Test
