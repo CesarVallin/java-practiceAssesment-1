@@ -35,7 +35,7 @@ public class Assessment {
         return min + max;
     }
 
-    /** */
+    /** Create inventory.  Number 5 */
     public static ArrayList<Vehicle> vehicles = new ArrayList<>();
     public static HashMap<String, Vehicle> createInventory(ArrayList<Vehicle> vehicles){
         HashMap<String, Vehicle> inventoryList = new HashMap<>();
